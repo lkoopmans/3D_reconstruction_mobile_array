@@ -1,1 +1,3 @@
-# 3D_reconstruction_mobile_array
+# 3D reconstruction pipeline for the mobile array
+
+![](image.png)
