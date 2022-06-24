@@ -86,10 +86,10 @@ class Generate3dMap:
             c += 1
             print('Video ', c, '/', idx+1)
 
-        print('Done. Time elaborated: ', np.round(time.time() - t_start, 3), 's')
+        print('Done. Time elapsed: ', np.round(time.time() - t_start, 3), 's')
         return
 
-    def generate_images(self, attack_stages, attack_stages_sample_rate, dry_run=False):
+    def generate_images(self, attack_stages, attack_stage_sample_interval, dry_run=False):
         print('--------------------------------------------')
         print('Generate single images from video data...')
         t_start = time.time()
@@ -98,9 +98,9 @@ class Generate3dMap:
         t_sample = np.arange(0, fps * np.max(attack_stages))
         t_valid = np.empty
 
-        for i in range(len(attack_stages_sample_rate)):
+        for i in range(len(attack_stage_sample_interval)):
             t_valid = np.append(t_valid, np.arange(attack_stages[i] * fps, attack_stages[i + 1] * fps,
-                                                   attack_stages_sample_rate[i]))
+                                                   attack_stage_sample_interval[i]))
 
         i = 0
 
@@ -120,7 +120,7 @@ class Generate3dMap:
                 c += 1
             i += 1
 
-        print('Done. Time elaborated: ', np.round(time.time() - t_start, 3), 's')
+        print('Done. Time elapsed: ', np.round(time.time() - t_start, 3), 's')
 
 def parse_metadata(video_file):
     temp_file = os.path.splitext(video_file)[0] + '.json'
