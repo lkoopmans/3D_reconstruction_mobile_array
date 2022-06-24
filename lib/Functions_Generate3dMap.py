@@ -18,6 +18,9 @@ class Generate3dMap:
         self.fps = []
         self.file_extensions = ['A', 'B', 'C']
 
+        if not os.path.exists('output'):
+            os.mkdir('output')
+
         self.output_images = input_videos_folder.replace('input', 'output')+'/images'
 
         if not os.path.exists(self.output_images):
