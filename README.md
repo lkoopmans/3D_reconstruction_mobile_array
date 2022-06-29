@@ -42,5 +42,5 @@ with its reference number. E.g. "3D_reconstruction_mobile_array/input/131"
 
 ### Analyse the data and generate the 3D map
 Now we can go to the "Main_Generate_3D_map.ipynb" notebook and set the input parameters. These are described 
-in the notebook itself. Here it is important that you select **kernel-->change kernel-->venv_3Dmap** such that 
+in the notebook itself. Here it is important that you select **kernel --> change kernel --> venv_3Dmap** such that 
 the packages are available.
